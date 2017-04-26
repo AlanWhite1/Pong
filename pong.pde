@@ -1,5 +1,6 @@
 int time=0;
 int base=20;
+int base1=840;
 int x,y,gameScore=0;
 int changeX=-20;
 int changeY=-20;
@@ -18,12 +19,14 @@ void draw()
     
     time= millis()/1000;
     
-  background(0); 
-  text(time, width/20, height/2);
+  background(0);
+  textSize(20);
+  text(time, width/15, height/2);
   text("TIME:", width/50, height/2);
   text("SCORE:"+gameScore+"",width/2,height/2);
   rect(mouseX,height-base,200,base);
-  fill(5, 200, 255);
+  rect(x-100, height-base1,200,base);
+ fill(5, 200, 255);
   ellipse(x,y,20,20);
   x=x+changeX;
   y=y+changeY;
